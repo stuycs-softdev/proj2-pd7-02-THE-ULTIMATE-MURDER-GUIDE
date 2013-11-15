@@ -13,7 +13,7 @@ APIs we will probably use*:
  
   Some weather API - For determining sunset times and burying on a good night
   
-  (API List is not set in stone. We may add more or remove some depending on the time we have)
+  *(API List is not set in stone. We may add more or remove some depending on the time we have)
   
   
   
