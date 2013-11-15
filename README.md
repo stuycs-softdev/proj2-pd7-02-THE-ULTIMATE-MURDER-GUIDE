@@ -1,7 +1,7 @@
 proj2-pd7-02-THE-ULTIMATE-MURDER-GUIDE
 ======================================
 
-Welcome to the ultimate tool for murderers!
+Welcome to the Shady, the ultimate tool for murderers!
 
 This website is designed to help murderers hide their victims' corpses.
 
