@@ -1,0 +1,140 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/foundation.css') }}" />
+    <script src="{{ url_for('static', filename='js/vendor/custom.modernizr.js') }}"></script>
+  </head>
+  <body>
+<!--________________________________________________________________________-->
+    
+       <div class="row">
+    <div class="large-12 columns">
+ 
+      <!-- Navigation -->
+ 
+        <ul class="button-group">
+          <li><a href="/home" class="button">Home</a></li>
+          <li><a href="/maps" class="button">Maps</a></li>
+          <li><a href="/lawyer" class="button">Lawyer</a></li>
+        </ul>
+ 
+      <!-- End Navigation -->
+
+      <!-- Header Content -->
+ 
+        <div class="row">
+ 
+          <div class="large-6 columns">
+ 
+            <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://api.wunderground.com/api/01c5e2f1dd1d7086/forecast/q/NY/New_York.json"></iframe>
+
+<br>
+ 
+          </div>
+ 
+ 
+          <div class="large-6 columns">
+ 
+            <h3 class="show-for-small">Weather<hr/></h3>
+ 
+            <div class="panel">
+              <h4 class="hide-for-small">Weather<hr/></h4>
+            <h5 class="subheader">Welcome to the weather panel! Here we will display whether the weather today is great for burying a dead body or not! We also have the forecast for the next few days!</h5>
+            </div>
+ 
+          </div>
+ 
+        </div>
+ 
+      <!-- End Header Content -->
+ 
+ <br>
+<br>
+
+     
+ 
+       <!-- Thumbnails -->
+ 
+        <div class="row">
+ 
+          <div class="large-12 show-for-small columns">
+          <h3>Header</h3><hr>
+        </div>
+ 
+          <div class="large-3 small-6 columns">
+            <img src="http://placehold.it/500x500&text=Thumbnail">
+            <div class="panel">
+              <p>Description</p>
+            </div>
+          </div>
+ 
+          <div class="large-3 small-6 columns">
+            <img src="http://placehold.it/500x500&text=Thumbnail">
+            <div class="panel">
+              <p>Description</p>
+            </div>
+          </div>
+ 
+          <div class="large-3 small-6 columns">
+            <img src="http://placehold.it/500x500&text=Thumbnail">
+            <div class="panel">
+              <p>Description</p>
+            </div>
+          </div>
+ 
+          <div class="large-3 small-6 columns">
+            <img src="http://placehold.it/500x500&text=Thumbnail">
+            <div class="panel">
+              <p>Description</p>
+            </div>
+          </div>
+ 
+        </div>
+ 
+      <!-- End Thumbnails -->
+ 
+ 
+      <!-- Footer -->
+ 
+        <footer class="row">
+        <div class="large-12 columns"><hr />
+            <div class="row">
+ 
+              <div class="large-6 columns">
+                  <p>© Copyright Period 7 Group 2</p>
+              </div>
+ 
+              <div class="large-6 columns">
+                  <ul class="inline-list right">
+                    <li><a href="https://www.facebook.com/sabrina.khan.716?fref=ts">Sabrina Khan</a></li>
+                    <li><a href="https://www.facebook.com/W0odchuk">Brian Chuk</a></li>
+                    <li><a href="https://www.facebook.com/its.only.lifee">Kelvin Mei</a></li>
+                    <li><a href="https://www.facebook.com/joshua.chin.104?fref=ts">Joshua Chin</a></li>
+                  </ul>
+              </div>
+ 
+            </div>
+        </div>
+      </footer>
+ 
+      <!-- End Footer -->
+ 
+ 
+    </div>
+  </div>
+    
+
+    
+
+<!--________________________________________________________________________-->
+
+    <script src="{{ url_for('static', filename='js/jquery.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/foundation.min.js')}}"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>
