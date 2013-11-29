@@ -18,22 +18,22 @@ def rainfall (a):
 def today (a):
     list = a.split ('period')
     today = list[1][list[1].find('title') + 8:list[1].find('fcttext') - 6]
-    return today
+    return '(' + today + ')'
 
 def tomorrow (a):
     list = a.split ('period')
     tomorrow = list[3][list[3].find('title') + 8:list[3].find('fcttext') - 6]
-    return tomorrow
+    return '(' + tomorrow + ')'
 
 def datomorrow (a):
     list = a.split ('period')
     datomorrow = list[5][list[5].find('title') + 8:list[5].find('fcttext') - 6]
-    return datomorrow
+    return '(' + datomorrow + ')'
 
 def edtomorrow (a):
     list = a.split ('period')
     edtomorrow = list[7][list[7].find('title') + 8:list[7].find('fcttext') - 6]
-    return edtomorrow
+    return '(' + edtomorrow + ')'
 
 def stat (a,b):
     list = a.split ('period')

@@ -35,8 +35,12 @@ def weather():
 		j = method.stat(response,3)
 		k = method.stat(response,5)
 		l = method.stat(response,7)
+		m = method.today(response)
+		n = method.tomorrow(response)
+		o = method.datomorrow(response)
+		p = method.edtomorrow(response)
 
-                return render_template("Weather.html", temp = a, winds = b, rainfall = c, zips = d, icona = e, iconb = f, iconc = g, icond = h, today = i, tomorrow = j, datomorrow = k, edtomorrow = l)
+                return render_template("Weather.html", temp = a, winds = b, rainfall = c, zips = d, icona = e, iconb = f, iconc = g, icond = h, today = i, tomorrow = j, datomorrow = k, edtomorrow = l, day1 = m, day2 = n, day3 = o, day4 = p)
 
 	else: 
 		zipcode = request.form['Zip'].encode('ascii','ignore')
