@@ -35,7 +35,7 @@
 
  
                 <div class="large-10 small-8 columns">
-                  <input type=text name = Zip Code>
+                  <input type=text name = Zip>
                 </div>
  
                 <div class="large-2 small-3 columns">
@@ -92,7 +92,13 @@
 	<br>
 	<br>
 
-	
+	<div class="row">
+    <div class="large-12 columns">
+      <img src="{{ url_for('static', filename='img/icon.gif') }}"><br><br>
+    </div>
+  </div>
+
+<br>
 	
 	<!-- Thumbnails -->
 	
@@ -103,30 +109,30 @@
           </div>
 	  
           <div class="large-3 small-6 columns">
-            <img src="http://placehold.it/500x500&text=Thumbnail">
+            <img src={{icona}}>
             <div class="panel">
-              <p>Description</p>
+              <p>Today: {{today}}</p>
             </div>
           </div>
 	  
           <div class="large-3 small-6 columns">
-            <img src="http://placehold.it/500x500&text=Thumbnail">
+            <img src={{iconb}}>
             <div class="panel">
-              <p>Description</p>
+              <p>Tomorrow: {{tomorrow}}</p>
             </div>
           </div>
 	  
           <div class="large-3 small-6 columns">
-            <img src="http://placehold.it/500x500&text=Thumbnail">
+            <img src={{iconc}}>
             <div class="panel">
-              <p>Description</p>
+              <p>The day after tomorrow: {{datomorrow}}</p>
             </div>
           </div>
 	  
           <div class="large-3 small-6 columns">
-            <img src="http://placehold.it/500x500&text=Thumbnail">
+            <img src={{icond}}>
             <div class="panel">
-              <p>Description</p>
+              <p>Even the day after that: {{edtomorrow}}</p>
             </div>
           </div>
 	  
