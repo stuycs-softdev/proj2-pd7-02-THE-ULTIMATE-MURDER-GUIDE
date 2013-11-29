@@ -12,17 +12,57 @@ app.secret_key = "ULTIMATEMURDERGUIDE"
 def home():
         if request.method == 'GET':
                 return render_template("Home.html")
+
 @app.route('/weather',methods=["POST","GET"])
 def weather():
         if request.method == 'GET':
-		link = 'http://api.wunderground.com/api/01c5e2f1dd1d7086/conditions/q/11209.json'
+		blah = '11209'
+		link = 'http://api.wunderground.com/api/01c5e2f1dd1d7086/conditions/q/' + blah + '.json'
 		connection = urllib2.urlopen(link)
 		response = connection.read()
 		a = method.temperature(response)
 		b = method.winds(response)
 		c = method.rainfall(response)
 		d = link[(link.find('conditions') + 13):(link.find('conditions') + 18)]
-                return render_template("Weather.html", temp = a, winds = b, rainfall = c, zips = d)
+		link = 'http://api.wunderground.com/api/01c5e2f1dd1d7086/forecast/q/11209.json'
+		connection = urllib2.urlopen(link)
+		response = connection.read()
+		e = method.img(response,1)
+		f = method.img(response,3)
+		g = method.img(response,5)
+		h = method.img(response,7)
+		i = method.stat(response,1)
+		j = method.stat(response,3)
+		k = method.stat(response,5)
+		l = method.stat(response,7)
+
+                return render_template("Weather.html", temp = a, winds = b, rainfall = c, zips = d, icona = e, iconb = f, iconc = g, icond = h, today = i, tomorrow = j, datomorrow = k, edtomorrow = l)
+
+	else: 
+		zipcode = request.form['Zip'].encode('ascii','ignore')
+		blah = str(zipcode)
+		link = 'http://api.wunderground.com/api/01c5e2f1dd1d7086/conditions/q/' + blah + '.json'
+		connection = urllib2.urlopen(link)
+		response = connection.read()
+		a = method.temperature(response)
+		b = method.winds(response)
+		c = method.rainfall(response)
+		d = link[(link.find('conditions') + 13):(link.find('conditions') + 18)]
+		link = 'http://api.wunderground.com/api/01c5e2f1dd1d7086/forecast/q/' + blah + '.json'
+		connection = urllib2.urlopen(link)
+		response = connection.read()
+		e = method.img(response,1)
+		f = method.img(response,3)
+		g = method.img(response,5)
+		h = method.img(response,7)
+		i = method.stat(response,1)
+		j = method.stat(response,3)
+		k = method.stat(response,5)
+		l = method.stat(response,7)
+
+                return render_template("Weather.html", temp = a, winds = b, rainfall = c, zips = d, icona = e, iconb = f, iconc = g, icond = h, today = i, tomorrow = j, datomorrow = k, edtomorrow = l)
+
+
 @app.route('/maps',methods=["POST","GET"])
 def maps():
         if request.method == 'GET':
