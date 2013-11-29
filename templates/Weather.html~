@@ -1,0 +1,152 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>THE ULTIMATE MURDER GUIDE</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/foundation.css') }}" />
+    <script src="{{ url_for('static', filename='js/vendor/custom.modernizr.js') }}"></script>
+  </head>
+  <body>
+<!--________________________________________________________________________-->
+    
+     <div class="row">
+    <div class="large-12 columns">
+ 
+      <!-- Navigation -->
+ 
+        <ul class="button-group">
+          <li><a href="#" class="button">Burial Spots</a></li>
+          <li><a href="#" class="button">Weather</a></li>
+          <li><a href="#" class="button">Lawyers</a></li>
+        </ul>
+ 
+      <!-- End Navigation -->
+ 
+ 
+      <!-- Header Content -->
+ 
+        <div class="row">
+ 
+          <div class="large-12 columns">
+ 
+            <iframe width="1000" height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
+
+ 
+          </div>
+</div>
+<br>
+<br>
+ 
+          <div class="large-12 columns">
+ 
+            <h3 class="show-for-small">Header<hr/></h3>
+ 
+            <div class="panel">
+              <h4 class="hide-for-small">The Murder Guide<hr/></h4>
+            <h5 class="subheader">Killed somebody? We can get you out of it!</h5>
+            </div>
+ 
+          <div class="row">
+              <div class="large-6 small-6 columns">
+                <div class="panel">
+                  <h5>Github</h5>
+                <h6 class="subheader">Link to our github repository!</h6>
+                <a href="https://github.com/stuycs-softdev/proj2-pd7-02-THE-ULTIMATE-MURDER-GUIDE" class="small button">Pewpew</a>
+                </div>
+              </div>
+ 
+              <div class="large-6 small-6 columns">
+                <div class="panel">
+                  <h5>SoftDev</h5>
+                <h6 class="subheader">Link to our Software Development Class website!</h6>
+                <a href="http://stuycs-softdev.github.io/ " class="small button">Pewpew</a>
+                </div>
+              </div>
+          </div>
+ 
+          </div>
+
+ 
+      <!-- End Header Content -->
+ 
+ 
+ 
+ 
+ 
+      <!-- Thumbnails -->
+ 
+        <div class="row">
+ 
+          <div class="large-12 show-for-small columns">
+          <h3>Header</h3><hr>
+        </div>
+ 
+ 
+          <div class="large-4 columns">
+            <img src="{{ url_for('static', filename='img/maps.jpg') }}">
+            <div class="panel">
+              <p>Find the perfect location to bury the dead body! Don't worry, jail isn't the right place for you!</p>
+            </div>
+          </div>
+ 
+          <div class="large-4 columns">
+            <img src="{{ url_for('static', filename='img/weather.jpeg') }}" width = 500 height = 300>
+            <div class="panel">
+              <p>Check the weather to prevent excessive work. You wouldn't want to bury a dead body during a hurricane right? All your hard work digging could be for nothing.</p>
+            </div>
+          </div>
+ 
+          <div class="large-4 columns">
+            <img src="{{ url_for('static', filename='img/lawyer.jpg') }}" width = 500 height = 300>
+            <div class="panel">
+              <p>Crap, there's a witness? You left behind a weapon? Fear not, hire a professional lawyer to get you out of it!</p>
+            </div>
+          </div>
+ 
+        </div>
+ 
+      <!-- End Thumbnails -->
+ 
+ 
+      <!-- Footer -->
+ 
+        <footer class="row">
+        <div class="large-12 columns"><hr />
+            <div class="row">
+ 
+              <div class="large-6 columns">
+                  <p>© Copyright Period 7 Group 2</p>
+              </div>
+ 
+              <div class="large-6 columns">
+                  <ul class="inline-list right">
+                    <li><a href="https://www.facebook.com/sabrina.khan.716?fref=ts">Sabrina Khan</a></li>
+                    <li><a href="https://www.facebook.com/W0odchuk">Brian Chuk</a></li>
+                    <li><a href="https://www.facebook.com/its.only.lifee">Kelvin Mei</a></li>
+                    <li><a href="https://www.facebook.com/joshua.chin.104?fref=ts">Joshua Chin</a></li>
+                  </ul>
+              </div>
+ 
+            </div>
+        </div>
+      </footer>
+ 
+      <!-- End Footer -->
+ 
+ 
+    </div>
+  </div>
+    
+
+    
+
+<!--________________________________________________________________________-->
+
+    <script src="{{ url_for('static', filename='js/jquery.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/foundation.min.js')}}"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather Forecast</title>
+    <title>THE ULTIMATE MURDER GUIDE</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/foundation.css') }}" />
     <script src="{{ url_for('static', filename='js/vendor/custom.modernizr.js') }}"></script>
   </head>
@@ -17,81 +17,86 @@
 	
         <ul class="button-group">
           <li><a href="/home" class="button">Home</a></li>
-          <li><a href="/maps" class="button">Maps</a></li>
+          <li><a href="/weather" class="button">Weather</a></li>
           <li><a href="/lawyer" class="button">Lawyer</a></li>
-        </ul>
+	</ul>
 	
 	<!-- End Navigation -->
-
-<!-- Search Bar -->
- 
-        <div class="row">
- 
-          <div class="large-12 columns">
-            <div class="radius panel">
- 
-            <form method = POST>
-              <div class="row collapse">
-
- 
-                <div class="large-10 small-8 columns">
-                  <input type=text name = Zip Code>
-                </div>
- 
-                <div class="large-2 small-3 columns">
-                  <input type = submit name = "button" value = "Search">
-                </div>
- 
-              </div>
-            </form>
- 
-          </div>
-          </div>
- 
-        </div>
- 
-      <!-- End Search Bar -->
-
+	
+	
 	<!-- Header Content -->
 	
         <div class="row">
 	  
           <div class="large-6 columns">
 	    
-	    <div class="panel">
-              <h4 class="hide-for-small">Conditions Today<hr/></h4>
-              <h5 class="subheader">
-		{{temp}}
-		<br>
-		  {{winds}}
-		<br>
-		  {{rainfall}}		  
-	      </h5>
-            </div>
-
-	    <br>
+            <img src="http://placehold.it/500x500&text=Image"><br>
 	    
           </div>
 	  
 	  
           <div class="large-6 columns">
 	    
-            <h3 class="show-for-small">Weather<hr/></h3>
+            <h3 class="show-for-small">Maps<hr/></h3>
 	    
             <div class="panel">
-              <h4 class="hide-for-small">Weather<hr/></h4>
-              <h5 class="subheader">Welcome to the weather panel! Here we will display whether the weather today is great for burying a dead body or not! We also have the forecast for the next few days!</h5>
+              <h4 class="hide-for-small">Burial Spots<hr/></h4>
+              <h5 class="subheader">Here is the comprehensive guide to the locations where you can hide a dead body!</h5>
+            </div>
+	    
+            <div class="row">
+              <div class="large-6 small-6 columns">
+                <div class="panel">
+                  <h5>Recommended Places</h5>
+                  <h6 class="subheader">Follow the link to find a list of recommendations for where to dump the body!</h6>
+                  <a href="#" class="small button">Go!</a>
+                </div>
+              </div>
+	      
+              <div class="large-6 small-6 columns">
+                <div class="panel">
+                  <h5>Materials</h5>
+                  <h6 class="subheader">Here is the list of materials you will need: </h6>
+                  <a href="www.amazon.com" class="small button">Amazon!</a>
+                </div>
+              </div>
             </div>
 	    
           </div>
 	  
         </div>
+<br>
 	
 	<!-- End Header Content -->
 	
-	<br>
-	<br>
-
+	
+	<!-- Search Bar -->
+	
+        <div class="row">
+	  
+          <div class="large-12 columns">
+            <div class="radius panel">
+	      
+              <form>
+		<div class="row collapse">
+		  
+                  <div class="large-10 small-8 columns">
+                    <input type="text" />
+                  </div>
+		  
+                  <div class="large-2 small-3 columns">
+                    <a href="#" class="postfix button expand">Search</a>
+                  </div>
+		  
+		</div>
+              </form>
+	      
+            </div>
+          </div>
+	  
+        </div>
+	
+	<!-- End Search Bar -->
 	
 	
 	<!-- Thumbnails -->
@@ -133,7 +138,6 @@
         </div>
 	
 	<!-- End Thumbnails -->
-	
 	
 	<!-- Footer -->
 	
