@@ -15,12 +15,14 @@ def home():
 @app.route('/weather',methods=["POST","GET"])
 def weather():
         if request.method == 'GET':
-		connection = urllib2.urlopen('http://api.wunderground.com/api/01c5e2f1dd1d7086/conditions/q/11209.json')
+		link = 'http://api.wunderground.com/api/01c5e2f1dd1d7086/conditions/q/11209.json'
+		connection = urllib2.urlopen(link)
 		response = connection.read()
 		a = method.temperature(response)
 		b = method.winds(response)
 		c = method.rainfall(response)
-                return render_template("Weather.html", temp = a, winds = b, rainfall = c)
+		d = link[(link.find('conditions') + 13):(link.find('conditions') + 18)]
+                return render_template("Weather.html", temp = a, winds = b, rainfall = c, zips = d)
 @app.route('/maps',methods=["POST","GET"])
 def maps():
         if request.method == 'GET':
