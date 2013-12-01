@@ -76,13 +76,15 @@ def weather():
 @app.route('/maps',methods=["POST","GET"])
 def maps():
         if request.method == 'GET':
-                #default = "345 Chambers Street, New York, NY 10007"
+                default = "345+Chambers+Street+New+York+NY+10007"
                 #loc= mapsmethod.location(default)
+                loc= "https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q="+default+"2&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=53.87374,114.082031&amp;ie=UTF8&amp;hq=&amp;hnear="+default+"&amp;t=m&amp;z=14&amp;ll=33.858119,-117.598538&amp;output=embed"
+
                 return render_template("Maps.html")
         else:
                 address=str(request.form["Location"].encode("ascii","ignore"))
                 loc= mapsmethod.location(address)
-                return render_template("Maps.html",temp ="")
+                return render_template("Maps.html")
 
 @app.route('/lawyer',methods=["POST","GET"])
 def lawyer():

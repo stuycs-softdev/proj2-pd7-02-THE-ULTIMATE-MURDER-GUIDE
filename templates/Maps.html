@@ -5,9 +5,29 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <style type="text/css">
+      html {height: 100% }
+      body {height: 100%; margin: 0; padding: 0 }
+      map-canvas {height:100% }
+    </style>
+
     <title>Burial Spots</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/foundation.css') }}" />
     <script src="{{ url_for('static', filename='js/vendor/custom.modernizr.js') }}"></script>
+     <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8BMVcgDDaxWB5kVxgQD9jT5Nsg58cA2c&sensor=false">
+    </script>
+     <script type="text/javascript">
+      function initialize() {
+        var mapOptions = {
+          center: new google.maps.LatLng(-34.397, 150.644),
+          zoom: 8
+        };
+        var map = new google.maps.Map(document.getElementById("map-canvas"),
+            mapOptions);
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
   </head>
 
   <body>
@@ -56,20 +76,15 @@
 	<!-- Header Content -->
 	
         <div class="row">
-	  
+	   
           <div class="large-6 columns">
-	    
+	      <div>
             <iframe width="470" height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
-	      
-		      src="https://maps.googleapis.com/maps/api/place/textsearch/jason?query=parks+in+Tribeca&key=AIzaSyB8BMVcgDDaxWB5kVxgQD9jT5Nsg58cA2c&sensor=false">
-	      >
-
+	      id="map-canvas">
 	    </iframe>
+	      </div>
 
-	    <br>
-	    
           </div>
-	  
 	  
           <div class="large-6 columns">
 	    
