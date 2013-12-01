@@ -2,6 +2,8 @@ from flask import Flask
 from flask import render_template,session,redirect,request,url_for
 import urllib2
 import method
+from googlemaps import GoogleMaps
+import mapsmethod
 
 
 app=Flask(__name__)
@@ -74,9 +76,10 @@ def weather():
 @app.route('/maps',methods=["POST","GET"])
 def maps():
         if request.method == 'GET':
-                default = "345 Chambers Street, New York, NY 10007"
-                link = "https://maps.googleapis.com/maps/api/js?key={AIzaSyB8BMVcgDDaxWB5kVxgQD9jT5Nsg58cA2c}/place/nearbysearch/" + default + ".json"
+                default = "345+Chambers+Street+New+York+NY+10007"
+                link = "https://maps.googleapis.com/maps/api/place/textsearch/json?query=park+near+"+default+"&key=AIzaSyB8BMVcgDDaxWB5kVxgQD9jT5Nsg58cA2c&sensor=false"
                 connection = urllib2.urlopen(link)
+                response = connection.read()
                 return render_template("Maps.html")
 
 @app.route('/lawyer',methods=["POST","GET"])
