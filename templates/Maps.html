@@ -1,5 +1,7 @@
 <!doctype html>
+
 <html class="no-js" lang="en">
+
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,9 +9,9 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/foundation.css') }}" />
     <script src="{{ url_for('static', filename='js/vendor/custom.modernizr.js') }}"></script>
   </head>
+
   <body>
-    <!--________________________________________________________________________-->
-    
+   
     <div class="row">
       <div class="large-12 columns">
 	
@@ -22,8 +24,7 @@
 	</ul>
 	
 	<!-- End Navigation -->
-	
-		
+
 	<!-- Search Bar -->
 	
         <div class="row">
@@ -35,7 +36,7 @@
 		<div class="row collapse">
 		  
                   <div class="large-10 small-8 columns">
-                    <input type="text" />
+                    <input type="text" name="Location"/>
                   </div>
 		  
                   <div class="large-2 small-3 columns">
@@ -58,7 +59,12 @@
 	  
           <div class="large-6 columns">
 	    
-            <iframe width="470" height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src=></iframe>
+            <iframe width="470" height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+	      
+		      src="https://maps.googleapis.com/maps/api/place/textsearch/jason?query=parks+in+Tribeca&key=AIzaSyB8BMVcgDDaxWB5kVxgQD9jT5Nsg58cA2c&sensor=false">
+	      >
+
+	    </iframe>
 
 	    <br>
 	    
@@ -71,25 +77,13 @@
 	    
             <div class="panel">
               <h4 class="hide-for-small">Burial Spots<hr/></h4>
-              <h5 class="subheader">Here is the comprehensive guide to the locations where you can hide a dead body!</h5>
+              <h5 class="subheader">Here is the best location to hide a dead body!</h5>
             </div>
 	    
-            <div class="row">
-              <div class="large-6 small-6 columns">
-                <div class="panel">
-                  <h5>Recommended Places</h5>
-                  <h6 class="subheader">Follow the link to find a list of recommendations for where to dump the body!</h6>
-                 <a href="http://www.experienceproject.com/question-answer/Best-Place-To-Hide-A-Dead-Body/1065636" class = "small button"> Go!</a>
-                </div>
-              </div>
-	      
-              <div class="large-6 small-6 columns">
-                <div class="panel">
-                  <h5>Materials</h5>
-                  <h6 class="subheader">Here is the list of materials you will need: </h6>
-                  <a href="https://www.amazon.com/" class = "small button"> Amazon!</a>
-                </div>
-              </div>
+            <div class="panel">
+              <h4 class="hide-for-small">Recommended Places<hr/></h4>
+              <h6 class="subheader">Follow the link to find a list of recommendations for where to dump the body!</h6>
+              <a href="http://www.experienceproject.com/question-answer/Best-Place-To-Hide-A-Dead-Body/1065636" class = "small button"> Go!</a>
             </div>
 	    
           </div>

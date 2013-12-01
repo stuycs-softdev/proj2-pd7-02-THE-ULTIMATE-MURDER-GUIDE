@@ -76,11 +76,13 @@ def weather():
 @app.route('/maps',methods=["POST","GET"])
 def maps():
         if request.method == 'GET':
-                default = "345+Chambers+Street+New+York+NY+10007"
-                link = "https://maps.googleapis.com/maps/api/place/textsearch/json?query=park+near+"+default+"&key=AIzaSyB8BMVcgDDaxWB5kVxgQD9jT5Nsg58cA2c&sensor=false"
-                connection = urllib2.urlopen(link)
-                response = connection.read()
+                #default = "345 Chambers Street, New York, NY 10007"
+                #loc= mapsmethod.location(default)
                 return render_template("Maps.html")
+        else:
+                address=str(request.form["Location"].encode("ascii","ignore"))
+                loc= mapsmethod.location(address)
+                return render_template("Maps.html",temp ="")
 
 @app.route('/lawyer',methods=["POST","GET"])
 def lawyer():
