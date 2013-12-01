@@ -1,6 +1,5 @@
 from flask import Flask
 from flask import render_template,session,redirect,request,url_for
-
 import urllib2
 import method
 
@@ -8,8 +7,13 @@ import method
 app=Flask(__name__)
 app.secret_key = "ULTIMATEMURDERGUIDE"
 
-@app.route('/home',methods=["POST","GET"])
+@app.route('/',methods=["POST","GET"])
 def home():
+        if request.method == 'GET':
+                return render_template("Home.html")
+
+@app.route('/home',methods=["POST","GET"])
+def hometwo():
         if request.method == 'GET':
                 return render_template("Home.html")
 
