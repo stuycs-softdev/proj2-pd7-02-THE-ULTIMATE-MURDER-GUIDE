@@ -20,7 +20,7 @@ def hometwo():
 @app.route('/weather',methods=["POST","GET"])
 def weather():
         if request.method == 'GET':
-		blah = '11209'
+		blah = '10007'
 		link = 'http://api.wunderground.com/api/01c5e2f1dd1d7086/conditions/q/' + blah + '.json'
 		connection = urllib2.urlopen(link)
 		response = connection.read()
@@ -28,7 +28,7 @@ def weather():
 		b = method.winds(response)
 		c = method.rainfall(response)
 		d = link[(link.find('conditions') + 13):(link.find('conditions') + 18)]
-		link = 'http://api.wunderground.com/api/01c5e2f1dd1d7086/forecast/q/11209.json'
+		link = 'http://api.wunderground.com/api/01c5e2f1dd1d7086/forecast/q/10007.json'
 		connection = urllib2.urlopen(link)
 		response = connection.read()
 		e = method.img(response,1)
@@ -74,7 +74,11 @@ def weather():
 @app.route('/maps',methods=["POST","GET"])
 def maps():
         if request.method == 'GET':
+                default = "345 Chambers Street, New York, NY 10007"
+                link = "https://maps.googleapis.com/maps/api/js?key={AIzaSyB8BMVcgDDaxWB5kVxgQD9jT5Nsg58cA2c}/place/nearbysearch/" + default + ".json"
+                connection = urllib2.urlopen(link)
                 return render_template("Maps.html")
+
 @app.route('/lawyer',methods=["POST","GET"])
 def lawyer():
         if request.method == 'GET':
