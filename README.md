@@ -11,12 +11,14 @@ APIs we will probably use*:
  
   Yelp - Lawyer ratings in case you get caught :(
  
-  Some weather API - For determining sunset times and burying on a good night
+  Weather Underground API - For determining the weather and seeing if it's suitable for burying a body. It also displays the forecast for the next 3 days in case that day isn't suitable. 
   
   *(API List is not set in stone. We may add more or remove some depending on the time we have)
   
   
-  
+CSS - Using Foundation 5 
+
+
 Roles:
 
   Leader: -       Sabrina Khan
