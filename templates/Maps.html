@@ -10,7 +10,6 @@
       body {height: 100%; margin: 0; padding: 0 }
       map-canvas {height:100% }
     </style>
-
     <title>Burial Spots</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/foundation.css') }}" />
     <script src="{{ url_for('static', filename='js/vendor/custom.modernizr.js') }}"></script>
@@ -26,7 +25,7 @@
         var map = new google.maps.Map(document.getElementById("map-canvas"),
             mapOptions);
       }
-      google.maps.event.addDomListener(window, 'load', initialize);
+      google.maps.event.addDomListener(window, "load", initialize);
     </script>
   </head>
 
@@ -78,11 +77,12 @@
         <div class="row">
 	   
           <div class="large-6 columns">
-	      <div>
-            <iframe width="470" height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
-	      id="map-canvas">
+	      
+           <iframe width="470" height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+
+	      <div id="map-canvas"/>>
+
 	    </iframe>
-	      </div>
 
           </div>
 	  
@@ -136,12 +136,6 @@
 	
       </div>
     </div>
-    
-
-    
-
-    <!--________________________________________________________________________-->
-
     <script src="{{ url_for('static', filename='js/jquery.js')}}"></script>
     <script src="{{ url_for('static', filename='js/foundation.min.js')}}"></script>
     <script>
