@@ -22,7 +22,7 @@ def hometwo():
 @app.route('/weather',methods=["POST","GET"])
 def weather():
         if request.method == 'GET':
-		blah = '10007'
+		blah = '11209'
 		link = 'http://api.wunderground.com/api/01c5e2f1dd1d7086/conditions/q/' + blah + '.json'
 		connection = urllib2.urlopen(link)
 		response = connection.read()
