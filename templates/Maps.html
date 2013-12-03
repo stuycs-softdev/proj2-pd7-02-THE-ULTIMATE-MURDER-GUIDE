@@ -1,20 +1,33 @@
 <!doctype html>
 
-<html class="no-js" lang="en">
+<html>
 
   <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+
+
     <title>Burial Spots</title>
+
+
     <link rel="stylesheet" href="{{ url_for('static', filename='css/foundation.css') }}" />
+
+
     <style type="text/css">
       html {height: 100% }
-      body {height: 100%; margin: 0; padding: 0 }
-      map-canvas {height:100% }
+      body {height: 100%; margin: 1; padding: 0 }
+      #map-canvas {height:500px;
+      width: 500px;}
     </style>
+
+
     <script src="{{ url_for('static', filename='js/vendor/custom.modernizr.js') }}"></script>
+
+
      <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDus1MUHNn7lXEz_Lj6KzIz3TXpk7-xNw&sensor=true">
     </script>
-     <script type="text/javascript">
+
+
+      <script type="text/javascript">
       function initialize() {
         var mapOptions = {
           center: new google.maps.LatLng(-34.397, 150.644),
@@ -25,7 +38,8 @@
       }
       google.maps.event.addDomListener(window, 'load', initialize);
     </script>
-  </head>
+ 
+ </head>
 
   <body>
    
@@ -74,7 +88,7 @@
 	
         <div class="row">
 	   
-          <div class="large-6 columns" id = "map-canvas">
+          <div class="large-6 columns"  id = "map-canvas">
 
           </div>
 	  
@@ -103,7 +117,7 @@
 	<!-- Footer -->
 	
         <footer class="row">
-          <div class="large-12 columns"><hr />
+          <div class="large-12 columns" ><hr />
             <div class="row">
 	      
               <div class="large-6 columns">
