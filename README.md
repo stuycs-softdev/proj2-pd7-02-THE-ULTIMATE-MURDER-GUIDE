@@ -8,6 +8,7 @@ This website is designed to help murderers hide their victims' corpses.
 APIs we will probably use*:
 
   Google Maps - For finding hardware stores for shovels, burial locations
+  Google Geocoding API to make use of latitude and long. data that google maps need.
  
   Yelp - Lawyer ratings in case you get caught :(
  
@@ -17,6 +18,7 @@ APIs we will probably use*:
   
   
 CSS - Using Foundation 5 
+Javascript from foundation, javascript for google maps.
 
 
 Roles:
