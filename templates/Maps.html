@@ -23,26 +23,15 @@
     <script src="{{ url_for('static', filename='js/vendor/custom.modernizr.js') }}"></script>
 
 
-     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDus1MUHNn7lXEz_Lj6KzIz3TXpk7-xNw&sensor=true">
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDus1MUHNn7lXEz_Lj6KzIz3TXpk7-xNw&sensor=true">
     </script>
 
+       {{jscripts|safe}}
 
-      <script type="text/javascript">
-      function initialize() {
-        var mapOptions = {
-          center: new google.maps.LatLng(-34.397, 150.644),
-          zoom: 8
-        };
-        var map = new google.maps.Map(document.getElementById("map-canvas"),
-            mapOptions);
-      }
-      google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
- 
- </head>
+  </head>
 
   <body>
-   
+    
     <div class="row">
       <div class="large-12 columns">
 	
@@ -56,38 +45,41 @@
 	
 	<!-- End Navigation -->
 
-	<!-- Search Bar -->
-	
+<!-- Search Bar -->
+ 
         <div class="row">
-	  
+ 
           <div class="large-12 columns">
             <div class="radius panel">
-	      
-              <form>
-		<div class="row collapse">
-		  
-                  <div class="large-10 small-8 columns">
-                    <input type=text name=Location/>
-                  </div>
-		  
-                  <div class="large-2 small-3 columns">
-                    <input type = submit name = "button" class="postfix button expand" value = "Enter Your Location!">
-                  </div>
-		  
-		</div>
-              </form>
-	      
-            </div>
+ 
+            <form method = POST>
+              <div class="row collapse">
+
+ 
+                <div class="large-10 small-8 columns">
+                  <input type=text name = Location>
+                </div>
+ 
+                <div class="large-2 small-3 columns">
+                  <input type = submit name = "button" class="postfix button expand" value = "Enter Your Location!">
+                </div>
+ 
+              </div>
+            </form>
+ 
           </div>
-	  
+          </div>
+ 
         </div>
-	
-	<!-- End Search Bar -->
+ 
+      <!-- End Search Bar -->
+
+
 
 	<!-- Header Content -->
 	
         <div class="row">
-	   
+	  
           <div class="large-6 columns"  id = "map-canvas">
 
           </div>
@@ -98,7 +90,7 @@
 	    
             <div class="panel">
               <h4 class="hide-for-small">Burial Spots<hr/></h4>
-              <h5 class="subheader">Here is the best location to hide a dead body!</h5>
+              <h5 class="subheader">Here we will guide you to the best location to hide a dead body! Enter in your address above. It MUST be in the format of (Building Number) (Street) (State) e.g. 345 Chambers Street, NY. DON'T FORGET THE COMMA BETWEEN THE STREET AND THE STATE! :) Zoom in and find the most secretive location you can find near YOU! Refer to the thread below for places!</h5>
             </div>
 	    
             <div class="panel">

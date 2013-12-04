@@ -77,25 +77,32 @@ def weather():
 def maps():
         if request.method == 'GET':
 		function = """
+ <script type="text/javascript">
           function initialize() {     
       var mapOptions = {
-      center: new google.maps.LatLng(-34.397, 150.644),
+      center: new google.maps.LatLng(40.7179707, -74.01403479999999),
       zoom: 8
       };
       var map = new google.maps.Map(document.getElementById("map-canvas"),
       mapOptions);
       }
       google.maps.event.addDomListener(window, 'load', initialize);
-          """
+</script>
+      """    
                 return render_template("Maps.html", jscripts = function)
         else:
-		link = 'http://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&sensor=true'
+		address = request.form['Location'].encode('ascii','ignore')
+		address = address.replace(" ", "+")
+		link = 'http://maps.googleapis.com/maps/api/geocode/json?address=' + address + '&sensor=true'
 		connection = urllib2.urlopen(link)
 		response = connection.read()
-		function = """function initialize() {
-          var JSONObject = """ + str(response) + """;
-	  var lat = JSONObject.results.geometry.location.lat
-	  var lng = JSONObject.results.geometry.location.lng
+		functionp1 = """
+          <script type="text/javascript">
+          function initialize() {
+          var JSONObject =  """
+		functionp2 = """
+ ;var lat = JSONObject.results[0].geometry.location.lat
+      var lng = JSONObject.results[0].geometry.location.lng
           var mapOptions = {
           center: new google.maps.LatLng(lat, lng),
           zoom: 8
@@ -103,7 +110,10 @@ def maps():
           var map = new google.maps.Map(document.getElementById("map-canvas"),
             mapOptions);
           }
-          google.maps.event.addDomListener(window, 'load', initialize);"""
+          google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+          """
+		function = functionp1 + response + functionp2
                 return render_template("Maps.html",jscripts = function)
 
 @app.route('/lawyer',methods=["POST","GET"])
