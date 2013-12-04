@@ -2,7 +2,6 @@ from flask import Flask
 from flask import render_template,session,redirect,request,url_for
 import urllib2
 import method
-from googlemaps import GoogleMaps
 import mapsmethod
 
 
