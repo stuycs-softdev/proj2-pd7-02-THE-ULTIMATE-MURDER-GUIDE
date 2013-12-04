@@ -76,20 +76,40 @@ def weather():
 @app.route('/maps',methods=["POST","GET"])
 def maps():
         if request.method == 'GET':
-                default = "345+Chambers+Street+New+York+NY+10007"
-                #loc= mapsmethod.location(default)
-                loc= "https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q="+default+"2&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=53.87374,114.082031&amp;ie=UTF8&amp;hq=&amp;hnear="+default+"&amp;t=m&amp;z=14&amp;ll=33.858119,-117.598538&amp;output=embed"
-
-                return render_template("Maps.html")
+		function = """
+          function initialize() {     
+      var mapOptions = {
+      center: new google.maps.LatLng(-34.397, 150.644),
+      zoom: 8
+      };
+      var map = new google.maps.Map(document.getElementById("map-canvas"),
+      mapOptions);
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+          """
+                return render_template("Maps.html", jscripts = function)
         else:
-                address=str(request.form["Location"].encode("ascii","ignore"))
-                loc= mapsmethod.location(address)
-                return render_template("Maps.html")
+		link = 'http://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&sensor=true'
+		connection = urllib2.urlopen(link)
+		response = connection.read()
+		function = """function initialize() {
+          var JSONObject = """ + str(response) + """;
+	  var lat = JSONObject.results.geometry.location.lat
+	  var lng = JSONObject.results.geometry.location.lng
+          var mapOptions = {
+          center: new google.maps.LatLng(lat, lng),
+          zoom: 8
+          };
+          var map = new google.maps.Map(document.getElementById("map-canvas"),
+            mapOptions);
+          }
+          google.maps.event.addDomListener(window, 'load', initialize);"""
+                return render_template("Maps.html",jscripts = function)
 
 @app.route('/lawyer',methods=["POST","GET"])
 def lawyer():
         if request.method == 'GET':
                 return render_template("Lawyer.html")
-                 
+	
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port =7002)
+	app.run(debug=True, host='0.0.0.0', port =7002)
