@@ -29,7 +29,7 @@
  
         <div class="large-4 small-12 columns">
  
-          <img src="http://placehold.it/500x500&text=Logo">
+          <img src="{{ url_for('static', filename='img/lawyer.jpg') }}">
  
           <div class="hide-for-small panel">
             <h3>Yelp Lawyers</h3>
@@ -37,11 +37,35 @@
             </h5>
           </div>
  
-          <a href="https://www.yelp.com">
-          <div class="panel callout radius">
-            <h6>Directly to Yelp</h6>
+<!-- Search Bar -->
+ 
+        <div class="row">
+ 
+          <div class="large-12 columns">
+            <div class="radius panel">
+ 
+            <form method = POST>
+              <div class="row collapse">
+
+ 
+                <div class="large-10 small-8 columns">
+                  <input type=text name = Location>
+                </div>
+ 
+                <div class="large-2 small-3 columns">
+                  <input type = submit name = "button" class="postfix button expand" value = "Enter Your Location!">
+                </div>
+ 
+              </div>
+            </form>
+ 
           </div>
-          </a>
+          </div>
+ 
+        </div>
+ 
+      <!-- End Search Bar -->
+
  
         </div>
  
