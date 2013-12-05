@@ -10,7 +10,7 @@ APIs we will probably use*:
   Google Maps - For finding burial locations
   Google Geocoding API to make use of latitude and long. data that google maps need.
  
-  Yelp - Lawyer ratings in case you get caught :(
+  Yelp - Lawyer ratings in case you get caught :( It will display the top 6 lawyers, and how good the lawyers are. Clicking on their images will link to them on Yelp.
  
   Weather Underground API - For determining the weather and seeing if it's suitable for burying a body. It also displays the forecast for the next 3 days in case that day isn't suitable. 
   
