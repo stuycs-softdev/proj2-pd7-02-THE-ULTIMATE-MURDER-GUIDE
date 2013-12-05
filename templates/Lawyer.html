@@ -76,60 +76,21 @@
  
         <div class="large-8 columns">
           <div class="row">
- 
+		    {% if lawyers is defined %}
+			{% for lawyer in lawyers %}
             <div class="large-4 small-6 columns">
-              <img src="http://placehold.it/1000x1000&text=Thumbnail">
- 
+			  <a href="{{ lawyer['url'] }}">
+                <img src="{{ lawyer['image_url'] }}">
+			  </a>
               <div class="panel">
-                <h5>Lawyer1</h5>
-                <h6 class="subheader">Rating</h6>
+                <h5>{{ lawyer['name'] }}</h5>
+                <h6 class="subheader">
+				  <img src={{ lawyer['rating_img_url_small'] }}>
+				</h6>
               </div>
             </div>
- 
-            <div class="large-4 small-6 columns">
-              <img src="http://placehold.it/500x500&text=Thumbnail">
- 
-              <div class="panel">
-                <h5>Lawyer2</h5>
-                <h6 class="subheader">Rating</h6>
-              </div>
-            </div>
- 
-            <div class="large-4 small-6 columns">
-              <img src="http://placehold.it/500x500&text=Thumbnail">
- 
-              <div class="panel">
-                <h5>Lawyer3</h5>
-                <h6 class="subheader">Rating</h6>
-              </div>
-            </div>
- 
-            <div class="large-4 small-6 columns">
-              <img src="http://placehold.it/500x500&text=Thumbnail">
- 
-              <div class="panel">
-                <h5>Lawyer4</h5>
-                <h6 class="subheader">Rating</h6>
-              </div>
-            </div>
- 
-            <div class="large-4 small-6 columns">
-              <img src="http://placehold.it/500x500&text=Thumbnail">
- 
-              <div class="panel">
-                <h5>Lawyer5</h5>
-                <h6 class="subheader">Rating</h6>
-              </div>
-            </div>
- 
-            <div class="large-4 small-6 columns">
-              <img src="http://placehold.it/500x500&text=Thumbnail">
- 
-              <div class="panel">
-                <h5>Lawyer6</h5>
-                <h6 class="subheader">Rating</h6>
-              </div>
-            </div>
+			{% endfor %}
+			{% endif %}
           </div>
  
     <!-- End Thumbnails -->
