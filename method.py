@@ -1,5 +1,3 @@
-import urllib2
-
 def temperature(a):
     temperature = a[a.find('temp_f'): a.find('temp_c')]
     temperature = "Temperature now = " + temperature[8:12]
