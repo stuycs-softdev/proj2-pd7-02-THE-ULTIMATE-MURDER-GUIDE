@@ -22,6 +22,10 @@ Javascript from foundation, javascript for google maps.
 Note that Javascript wasn't used to extract info from json files (did that before javascript lesson)
 However, the maps section uses javascript to properly extract info from the json api file.
 
+IMPORTANT: rauth is needed for the lawyers, so it is necessary to do pip install rauth before running!
+
+
+
 
 Roles:
 
