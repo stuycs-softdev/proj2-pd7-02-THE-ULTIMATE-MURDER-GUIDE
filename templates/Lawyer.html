@@ -1,4 +1,5 @@
-<!doctype html>
+
+ <!doctype html>
 <html class="no-js" lang="en">
   <head>
     <meta charset="utf-8" />
@@ -12,24 +13,24 @@
     
     <div class="row">
       <div class="large-12 columns">
-	
-	<!-- Navigation -->
-	
+        
+        <!-- Navigation -->
+        
         <ul class="button-group">
           <li><a href="/home" class="button"><font face = "purisa" color = "yellow">Home</font></a></li>
           <li><a href="/weather" class="button"><font face = "purisa" color = "yellow">Weather</font></a></li>
           <li><a href="/maps" class="button"><font face = "purisa" color = "yellow">Burial Spots</font></a></li>
-	</ul>
-	
-	<!-- End Navigation -->
-	
+        </ul>
+        
+        <!-- End Navigation -->
+        
 <div class="row">
  
   <!-- Side Bar -->
  
         <div class="large-4 small-12 columns">
  
-          <img src="{{ url_for('static', filename='img/lawyer2.jpg') }}">
+          <img src="{{ url_for('static', filename='img/lawyer.jpg') }}">
  
           <div class="hide-for-small panel">
             <h3>Yelp Lawyers</h3>
@@ -44,7 +45,20 @@
           <div class="large-12 columns">
             <div class="radius panel">
  
-           <a href = "http://yelp.com"> Link directly to Yelp</a>
+            <form method = POST>
+              <div class="row collapse">
+
+ 
+                <div class="large-10 small-8 columns">
+                  <input type=text name = Location>
+                </div>
+ 
+                <div class="large-2 small-3 columns">
+                  <input type = submit name = "button" class="postfix button expand" value = "Enter Your Location!">
+                </div>
+ 
+              </div>
+            </form>
  
           </div>
           </div>
@@ -63,21 +77,21 @@
  
         <div class="large-8 columns">
           <div class="row">
-		    {% if lawyers is defined %}
-			{% for lawyer in lawyers %}
+                    {% if lawyers is defined %}
+                        {% for lawyer in lawyers %}
             <div class="large-4 small-6 columns">
-			  <a href={{ lawyer['url'] }}>
-                <img src={{ lawyer['image_url'] }}>
-			  </a>
+                          <a href="{{ lawyer['url'] }}">
+                <img src="{{ lawyer['image_url'] }}">
+                          </a>
               <div class="panel">
                 <h5>{{ lawyer['name'] }}</h5>
                 <h6 class="subheader">
-				  <img src={{ lawyer['rating_img_url_small'] }}>
-				</h6>
+                                  <img src={{ lawyer['rating_img_url_small'] }}>
+                                </h6>
               </div>
             </div>
-			{% endfor %}
-			{% endif %}
+                        {% endfor %}
+                        {% endif %}
           </div>
  
     <!-- End Thumbnails -->
@@ -107,19 +121,19 @@
  
           </div>
         </div>
-      </div>	
+      </div>        
 
-	
-	<!-- Footer -->
-	
+        
+        <!-- Footer -->
+        
         <footer class="row">
           <div class="large-12 columns"><hr />
             <div class="row">
-	      
+              
               <div class="large-6 columns">
                 <p>© Copyright Period 7 Group 2</p>
               </div>
-	      
+              
               <div class="large-6 columns">
                 <ul class="inline-list right">
                   <li><a href="https://www.facebook.com/sabrina.khan.716?fref=ts">Sabrina Khan</a></li>
@@ -128,14 +142,14 @@
                   <li><a href="https://www.facebook.com/joshua.chin.104?fref=ts">Joshua Chin</a></li>
                 </ul>
               </div>
-	      
+              
             </div>
           </div>
-	</footer>
-	
-	<!-- End Footer -->
-	
-	
+        </footer>
+        
+        <!-- End Footer -->
+        
+        
       </div>
     </div>
     
