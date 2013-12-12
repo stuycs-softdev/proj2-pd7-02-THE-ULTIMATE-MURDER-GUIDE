@@ -71,7 +71,6 @@
  
     <!-- End Side Bar -->
  
- 
     <!-- Thumbnails -->
  
         <div class="large-8 columns">
@@ -79,7 +78,8 @@
                     {% if lawyers is defined %}
                         {% for lawyer in lawyers %}
             <div class="large-4 small-6 columns">
-                          <a href="{{ lawyer['url'] }}">
+                          <a href="{{ lawyer['url'] }}"><font face = "purisa" color = "red" size = "6">Pew Pew!</font>
+<p>
                 <img src="{{ lawyer['image_url'] }}">
                           </a>
               <div class="panel">
@@ -95,15 +95,30 @@
  
     <!-- End Thumbnails -->
  
- 
-    <!-- Managed By -->
+ <font face = "purisa">
+    <!-- Info -->
           <div class="row">
             <div class="large-12 columns">
               <div class="panel">
                 <div class="row">
+                 <div class="large-10 small-6 columns">
+                    <strong>How To Use<hr/></strong>
+ This part is easy to use. Just enter a zip code in that search bar to the left, and we will find you 6 great lawyers with their individual ratings. You can then click on them to go to yelp and hire them!
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
  
+    <!-- Info -->
+
+<!-- Managed By -->
+          <div class="row">
+            <div class="large-12 columns">
+              <div class="panel">
+                <div class="row">
                   <div class="large-2 small-6 columns">
-                    <img src="http://placehold.it/300x300&text=Site Owner">
+                    <img src="https://lh3.googleusercontent.com/-4alm6whFFho/UTqWiRZtZJI/AAAAAAAAIlU/ZE_CGljdAXc/w609-h608-no/meandbatya.jpg">
                   </div>
  
                   <div class="large-10 small-6 columns">
@@ -117,7 +132,7 @@
             </div>
  
     <!-- End Managed By -->
- 
+ </font>
           </div>
         </div>
       </div>        
