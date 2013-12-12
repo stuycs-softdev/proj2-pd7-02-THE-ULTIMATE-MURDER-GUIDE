@@ -80,7 +80,8 @@ def maps():
           function initialize() {     
       var mapOptions = {
       center: new google.maps.LatLng(40.7179707, -74.01403479999999),
-      zoom: 17
+      zoom: 17,
+      mapTypeId:google.maps.MapTypeId.HYBRID
       };
       var map = new google.maps.Map(document.getElementById("map-canvas"),
       mapOptions);
@@ -104,7 +105,8 @@ def maps():
       var lng = JSONObject.results[0].geometry.location.lng
           var mapOptions = {
           center: new google.maps.LatLng(lat, lng),
-          zoom: 17
+          zoom: 17,
+          mapTypeId:google.maps.MapTypeId.Hybrid
           };
           var map = new google.maps.Map(document.getElementById("map-canvas"),
             mapOptions);
